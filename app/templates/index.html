@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+        {% if user %}
+        <h1>Hello, {{ user.username }} </h1>
+        {% else %}
+        <h1>Hello, Guest </h1>
+        {% endif %}
+        <h2>Enter a song name: </h2>
+    </body>
+    <form method="POST">
+        <input name="text">
+        <input type="submit">
+    </form>
+{% endblock %}
