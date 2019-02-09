@@ -23,7 +23,10 @@
       <div class="container">
         <h1>Lyric viewer idk</h1>
         <p>any jammers?</p>
-        <p><a class="btn btn-primary btn-lg" href="lyrics.html" role="button">Go &raquo;</a></p>
+        <div class="d-flex">
+          <input type="text" class="form-control" id="usr" oninput="keypress()">
+          <p><a class="btn btn-primary btn-lg disabled" href="javascript:void" role="button" onclick="go()" id="go_btn">Go &raquo;</a></p>
+        </div>
       </div>
     </div>
 
@@ -42,8 +45,6 @@
       </footer>
     </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
