@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="theme-color" content="#5c812c"/>
+        <link href="/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="/dist/css/lyrics.min.css" rel="stylesheet" />
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Dumb Retard Project</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="padding-top: 32px;">
+      <div class="row">
+        <div class="col-md-12">
+            <svg>
+
+            </svg>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>UGAHacks Hackathon Project</p>
+      </footer>
+    </div>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script>
+            d3.request("https://developer.nrel.gov/api/solar/open_pv/installs/summaries"
+                .send("GET", data, callback);
+            const margin = 60;
+            const width = 1000 - 2 * margin;
+            const height = 600 - 2 * margin;
+        
+            const svg = d3.select('svg');
+            const chart = svg.append('g')
+                .attr('transform', `translate(${margin}, ${margin})`);
+            const yScale = d3.scaleLinear()
+                .range([height, 0])
+                .domain([0, 100]);
+            chart.append('g')
+                .call(d3.axisLeft(yScale));
+            const xScale = d3.scaleBand()
+                .range([0, width])
+                .domain(sample.map((s) => s.language))
+                .padding(0.2)
+
+            chart.append('g')
+                .attr('transform', `translate(0, ${height})`)
+                .call(d3.axisBottom(xScale));
+
+        </script>
+    </body>
+</html>
